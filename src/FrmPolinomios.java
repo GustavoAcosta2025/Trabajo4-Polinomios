@@ -207,8 +207,10 @@ public class FrmPolinomios extends JFrame {
                 return ServicioPolinomio.restar(p1, p2);
             case 2: // multiplicación
                 return ServicioPolinomio.multiplicar(p1, p2);
+            case 3: // división
+                return ServicioPolinomio.dividir(p1, p2);
             case 4: // derivar
-                return cmbPolinomio.getSelectedIndex() == 0 ? p1.getDerivada() : p2.getDerivada();
+                return cmbPolinomio.getSelectedIndex() == 0 ? ServicioPolinomio.derivada(p1) : ServicioPolinomio.derivada(p2);
         }
         return new Polinomio();
     }
@@ -245,5 +247,4 @@ public class FrmPolinomios extends JFrame {
             p2.mostrar(lblPolinomio2);
         }
     }
-
 }

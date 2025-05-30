@@ -29,4 +29,8 @@ public class Nodo {
         this.coeficiente = coeficiente;
     }
 
+    public Nodo getSiguiente() {
+        return siguiente;
+    }
+
 }
